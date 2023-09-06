@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  email    String  @unique
+  name     String?
+  password String
+  tests    Test[]
+  results  Result[]
+}
+model Test {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  author      User     @relation(fields: [authorId], references: [id])
+  authorId    String   @db.ObjectId
+  question    Question[]
+  results    Result[]
+}
+model Question {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  text          String
+  type          String
+  test          Test     @relation(fields: [testId], references: [id])
+  testId        String   @db.ObjectId
+  correctAnswer Answer[]
+}
+model Answer {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  text          String
+  isCorrect     Boolean
+  question      Question     @relation(fields: [questionId], references: [id])
+  questionId    String   @db.ObjectId
+}
+model Result  {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  score       Int
+  createdAt   DateTime @default(now())
+  test          Test     @relation(fields: [testId], references: [id])
+  testId        String   @db.ObjectId
+  author      User     @relation(fields: [authorId], references: [id])
+  authorId    String   @db.ObjectId
+}
