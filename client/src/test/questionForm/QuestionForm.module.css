@@ -1,0 +1,38 @@
+.answerForm {
+  width: 500px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.answerForm h2{
+  color: rgb(59, 59, 59);
+  white-space: normal; 
+  word-wrap: break-word; 
+  margin-bottom: 15px;
+}
+
+.answerOption {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; 
+}
+
+.answerOption input[type="radio"] {
+  margin-right: 10px; 
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}

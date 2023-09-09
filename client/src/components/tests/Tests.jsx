@@ -3,7 +3,7 @@ import { TestService } from "../../services/test.service";
 import TestItem from "./testItem/TestItem";
 import { Header } from "../header/Header";
 
-function Test(){
+function Tests(){
   const {data, isLoading} = useQuery(['tests'], () => TestService.getAll())
   if(isLoading) return <p>loading....</p>
   return(
@@ -17,4 +17,4 @@ function Test(){
   )
 }
 
-export default Test
+export default Tests

@@ -4,7 +4,7 @@ import { Header } from '../header/Header';
 
 function App() {
   return (
-    <div className={styles.App} s>
+    <div className={styles.App}>
       <Header/>
       <img className={styles.logo} src='https://www.getautismactive.com/wp-content/uploads/2021/01/Test-Logo-Circle-black-transparent.png' alt="Logo" />
     </div>

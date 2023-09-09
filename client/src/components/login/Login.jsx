@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Header } from "../header/Header";
 import styles from '../login/Login.module.css'
 import {useForm} from 'react-hook-form'
 import { useMutation } from "@tanstack/react-query";
 import { UserService } from "../../services/user.service";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
+  const {setUser} = useContext(AuthContext)
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -17,9 +21,12 @@ export const Login = () => {
   const {mutate} = useMutation(['login'],
   (data) => UserService.login(data), {
     onSuccess: (data) => {
-      console.log("token:   " + data.token);
+      setUser(data)
+      navigate('/')
+    },
+    onError: (error) => {
       reset();
-    }
+    },
   })
   const loginUser = data => {
     mutate(data)

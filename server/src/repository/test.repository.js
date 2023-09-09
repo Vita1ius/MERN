@@ -32,3 +32,13 @@ export async function deleteTest(id){
     }
   });
 }
+export async function findById(id){
+  return prisma.test.findFirst({
+    where: {
+      id
+    },
+    include: {
+      question: true,
+    },
+  });
+}

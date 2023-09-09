@@ -25,6 +25,15 @@ export const getTests = async (req, res) => {
   }
 }
 
+export const getTestById = async (req, res) => {
+  try {
+      const response = await testController.findById(req.params.id);
+      res.status(200).json(response)
+  } catch (error) {
+      res.status(500).json({ msg: error.message })
+  }
+}
+
 export const deleteTest = async (req, res) => {
   try {
       const test = await testController.deleteTest(req.params.id)

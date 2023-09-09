@@ -13,6 +13,7 @@ router.post('/user/sighup', userController.createUser)
 router.delete('/user', userController.deleteUser)
 
 router.get('/tests', testController.getTests)
+router.get('/test/:id', testController.getTestById)
 router.post('/test/create',authenticated, testController.createUser)
 router.delete('/test/:id', testController.deleteTest)
 

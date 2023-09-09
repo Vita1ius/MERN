@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import styles from '../header/Header.module.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 
 export const Header = () => {
-  const isAuth = false;
-
-  const onClickLogout = () => {};
+  const {user,setUser} = useContext(AuthContext)
+  const isAuth = user ? true : false;
 
   return (
       <div className={styles.root}>
@@ -21,9 +21,9 @@ export const Header = () => {
                 <Link to='/tests'>
                   <button>Tests</button>
                 </Link>
-                <button onClick={onClickLogout} color="error">
-                  Выйти
-                </button>
+                <Link to='/'>
+                  <button onClick={() => setUser(null)}>Logout</button>
+                </Link>
               </>
             ) : (
               <>
