@@ -3,8 +3,8 @@
 Приклад можна глянути на сайті https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/mongodb/connect-your-database-node-mongodb
 
 Щоб запустити server треба запустити наступні команди:
-  npm run build
-  npx prisma generate
+  npm run build,
+  npx prisma generate,
   npm run start
 
 Щоб запустити client достатньо команди npm start
