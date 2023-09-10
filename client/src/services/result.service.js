@@ -3,7 +3,7 @@ import axios  from 'axios';
 export const ResultService = {
   async createResult(data, token) {
     try {
-      const response = await axios.post('http://localhost:5000/result/create', data, {
+      const response = await axios.post('https://mern-server-ny7d.onrender.com/result/create', data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -14,7 +14,7 @@ export const ResultService = {
     }
   },
   async getById(id){
-    const response = await axios.get(`http://localhost:5000/results/${id}`)
+    const response = await axios.get(`https://mern-server-ny7d.onrender.com/results/${id}`)
     return response.data
   }
 }

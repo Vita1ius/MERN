@@ -11,7 +11,7 @@ export const TestService = {
   },
   async myTests(token) {
     try {
-      const response = await axios.get('http://localhost:5000/myTests', {
+      const response = await axios.get('https://mern-server-ny7d.onrender.com/myTests', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -23,7 +23,7 @@ export const TestService = {
   },
   async createTest(data, token) {
     try {
-      const response = await axios.post('http://localhost:5000/test/create',data, {
+      const response = await axios.post('https://mern-server-ny7d.onrender.com/test/create',data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
