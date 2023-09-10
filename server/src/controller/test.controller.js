@@ -27,7 +27,6 @@ export const getTests = async (req, res) => {
 
 export const getTestsByAuthorId = async (req, res) => {
   try {
-    console.log(req.user.id);
       const response = await testController.findByAuthorId(req.user.id);
       res.status(200).json(response)
   } catch (error) {

@@ -1,0 +1,32 @@
+.infoTest{
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px auto; /* Центрування по горизонталі */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 600px;
+}
+
+.infoTest input{
+  margin: 1.5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+h2{
+  padding: 10px;
+}
+.createButton {
+  background-color: rgb(103, 122, 110);
+  color: white;
+  box-shadow: 0 2px 4px rgba(163, 38, 38, 0.1);
+  border: 2px solid #d1cccc;
+  margin-top: 7px;
+}

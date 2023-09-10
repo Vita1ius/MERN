@@ -47,7 +47,7 @@ p {
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease;
-  width: 170px; /* Задаємо ширину кнопки */
+  width: 200px; /* Задаємо ширину кнопки */
   margin: 10px auto; 
 }
 

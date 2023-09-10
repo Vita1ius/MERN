@@ -3,6 +3,7 @@ import { ResultService } from "../../services/result.service";
 import { useParams } from "react-router-dom";
 import { Header } from "../header/Header";
 import { format } from 'date-fns';
+import styles from './TestResults.module.css'
 
 function TestResults(){
   const { id } = useParams();
@@ -11,7 +12,7 @@ function TestResults(){
   return (
     <div>
       <Header />
-      <div>
+      <div className={styles.infoResults}>
         {data.length ? (
           data.map(result => (
             <p>

@@ -24,6 +24,9 @@ export const Header = () => {
                 <Link to='/myTests'>
                   <button>My Tests</button>
                 </Link>
+                <Link to='/createTest'>
+                  <button>Create Test</button>
+                </Link>
                 <Link to='/'>
                   <button onClick={() => setUser(null)}>Logout</button>
                 </Link>

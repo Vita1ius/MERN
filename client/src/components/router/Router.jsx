@@ -6,6 +6,7 @@ import Register from '../register/Register';
 import Test from '../test/Test';
 import MyTests from '../myTests/MyTests';
 import TestResults from '../testResults/TestResults';
+import CreateTest from '../createTest/CreateTest';
 const Router = () => {
   return <BrowserRouter>
     <Routes>
@@ -16,6 +17,7 @@ const Router = () => {
       <Route element={<Test/>} path='/test/:id'/>
       <Route element={<TestResults/>} path='/myTestResults/:id'/>
       <Route element={<Register/>} path='/register'/>
+      <Route element={<CreateTest/>} path='/createTest'/>
       <Route  path='*' element={<div>Not found</div>}/>
     </Routes>
       </BrowserRouter>

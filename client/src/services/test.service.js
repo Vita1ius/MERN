@@ -20,5 +20,17 @@ export const TestService = {
     } catch (error) {
       console.log('Помилка під час виконання запиту:', error);
     }
-  }
+  },
+  async createTest(data, token) {
+    try {
+      const response = await axios.post('http://localhost:5000/test/create',data, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.log('Помилка під час виконання запиту:', error);
+    }
+  },
 }
