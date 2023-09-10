@@ -14,3 +14,10 @@ export async function create(
     }
   });
 }
+export async function findByTestId(testId){
+  return prisma.result.findMany({
+    where: {
+      testId: testId
+    },
+  });
+}

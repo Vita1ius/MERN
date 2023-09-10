@@ -25,6 +25,16 @@ export const getTests = async (req, res) => {
   }
 }
 
+export const getTestsByAuthorId = async (req, res) => {
+  try {
+    console.log(req.user.id);
+      const response = await testController.findByAuthorId(req.user.id);
+      res.status(200).json(response)
+  } catch (error) {
+      res.status(500).json({ msg: error.message })
+  }
+}
+
 export const getTestById = async (req, res) => {
   try {
       const response = await testController.findById(req.params.id);

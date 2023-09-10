@@ -14,3 +14,12 @@ export const createResult = async (req, res) => {
       res.status(400).json({ msg: error.message })
   }
 }
+
+export const getResultsByTestId = async (req, res) => {
+  try {
+      const response = await resultRepository.findByTestId(req.params.id);
+      res.status(200).json(response)
+  } catch (error) {
+      res.status(500).json({ msg: error.message })
+  }
+}

@@ -19,7 +19,10 @@ export const Header = () => {
             {isAuth ? (
               <>
                 <Link to='/tests'>
-                  <button>Tests</button>
+                  <button>All Tests</button>
+                </Link>
+                <Link to='/myTests'>
+                  <button>My Tests</button>
                 </Link>
                 <Link to='/'>
                   <button onClick={() => setUser(null)}>Logout</button>

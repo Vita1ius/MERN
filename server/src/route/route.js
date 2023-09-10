@@ -14,6 +14,7 @@ router.delete('/user', userController.deleteUser)
 
 router.get('/tests', testController.getTests)
 router.get('/test/:id', testController.getTestById)
+router.get('/myTests',authenticated, testController.getTestsByAuthorId)
 router.post('/test/create',authenticated, testController.createUser)
 router.delete('/test/:id', testController.deleteTest)
 
@@ -23,5 +24,6 @@ router.get('/answers/:questionId', answerController.getAnswers)
 router.post('/answer/create', answerController.createAnswer)
 
 router.post('/result/create',authenticated, resultController.createResult)
+router.get('/results/:id', resultController.getResultsByTestId)
 
 export default router;

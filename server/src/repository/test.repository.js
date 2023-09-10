@@ -42,3 +42,11 @@ export async function findById(id){
     },
   });
 }
+
+export async function findByAuthorId(authorId){
+  return prisma.test.findMany({
+    where: {
+      authorId: authorId
+    },
+  });
+}

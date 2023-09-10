@@ -12,7 +12,11 @@
   text-align: center;
   width: 600px;
 }
-
+.completeTest{
+  margin: 6px;
+  margin-bottom: -4px;
+  background-color: #000000;
+}
 h2 {
   font-size: 24px;
   margin: 0;

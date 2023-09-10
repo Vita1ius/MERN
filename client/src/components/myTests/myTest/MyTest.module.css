@@ -1,0 +1,56 @@
+/* ВашStyles.module.css */
+
+
+.item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px auto; /* Центрування по горизонталі */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+}
+
+.item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #777;
+}
+
+.testButton {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  width: 170px; /* Задаємо ширину кнопки */
+  margin: 10px auto; 
+}
+
+button:hover {
+  background-color: #218c54;
+}
