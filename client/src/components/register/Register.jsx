@@ -20,7 +20,7 @@ export const Register = () => {
   const {mutate} = useMutation(['register'],
   (data) => UserService.register(data),{
     onSuccess: (data) => {
-      navigate('/');
+      navigate('/login');
     },
     onError: (error) => {
       reset();
