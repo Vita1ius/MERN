@@ -2,11 +2,11 @@ import axios  from 'axios';
 
 export const TestService = {
   async getAll(){
-    const response = await axios.get('http://localhost:5000/tests')
+    const response = await axios.get('https://mern-server-ny7d.onrender.com/tests')
     return response.data
   },
   async getById(id){
-    const response = await axios.get(`http://localhost:5000/test/${id}`)
+    const response = await axios.get(`https://mern-server-ny7d.onrender.com/test/${id}`)
     return response.data
   },
   async myTests(token) {
